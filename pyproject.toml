@@ -1,0 +1,18 @@
+[project]
+name = "paperpilot-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.163.1",
+    "langchain>=1.5.0",
+    "langchain-groq>=1.1.3",
+    "langgraph>=1.2.22",
+    "pydantic>=2.14.3",
+    "pymupdf>=2.1",
+    "python-dotenv>=1.2.4",
+    "reportlab>=5.1.0",
+    "streamlit>=1.67.0",
+    "uvicorn>=0.54.0",
+]

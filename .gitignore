@@ -1,0 +1,77 @@
+
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ==============================
+# Environment & Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+.streamlit/secrets.toml
+secrets.toml
+*.pem
+*.key
+
+# ==============================
+# Local data & generated reports
+# ==============================
+data/uploads/*
+!data/uploads/.gitkeep
+
+outputs/*
+!outputs/.gitkeep
+
+*.pdf
+*.docx
+*.xlsx
+*.csv
+
+# ==============================
+# Caches & temporary files
+# ==============================
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+*.log
+*.tmp
+*.temp
+
+# ==============================
+# IDE & OS
+# ==============================
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Testing / Coverage
+# ==============================
+.coverage
+htmlcov/
+coverage.xml
+
+# ==============================
+# Miscellaneous
+# ==============================
+*.bak
+*.swp
+*.swo
