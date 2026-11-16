@@ -101,6 +101,7 @@ p, label, li {
     color: #A8B6CC;
 }
 
+
 .hero {
     background: linear-gradient(
         135deg,
@@ -112,8 +113,12 @@ p, label, li {
     border-radius: 22px;
     padding: 38px 40px;
     margin-bottom: 25px;
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
+
 
 .hero-tag {
     color: #6DE5E0;
@@ -245,6 +250,53 @@ hr {
     font-size: 12px;
 }
 
+
+/* Global Developer Identity */
+
+.developer-badge {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 16px 16px;
+    background: rgba(17, 29, 48, 0.75);
+    border: 1px solid rgba(87, 229, 214, 0.25);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px #6de5e0;
+}
+
+.developer-name {
+    color: #F4F7FF;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+}
+
+.developer-role {
+    color: #57E5D6;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-top: 6px;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+
+    .developer-badge {
+        text-align: left;
+        padding: 12px 16px;
+    }
+
+    .developer-name {
+        font-size: 13px;
+    }
+}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -332,24 +384,47 @@ with st.sidebar:
 # =========================================================
 # HEADER
 # =========================================================
+hero_left, hero_right = st.columns([3.5, 1.2], vertical_alignment="center")
 
-st.markdown("""
-<div class="hero">
-    <div class="hero-tag">
-        AI RESEARCH INTELLIGENCE PLATFORM
-    </div>
-    <div class="hero-title">
-        Navigate Research.<br>
-        Discover Intelligence.
-    </div>
-    <div class="hero-description">
-        Transform research papers into structured knowledge,
-        evidence-backed analysis, critical reviews, and
-        actionable research insights.
-    </div>
-</div>
-""", unsafe_allow_html=True)
+with hero_left:
+    st.markdown(
+        '<div class="hero-tag">AI RESEARCH INTELLIGENCE PLATFORM</div>',
+        unsafe_allow_html=True
+    )
 
+    st.markdown(
+        """
+        <div class="hero-title">
+            Navigate Research.<br>
+            Discover Intelligence.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+    st.markdown(
+        """
+        <div class="hero-description">
+            Transform research papers into structured knowledge,
+            evidence-backed analysis, critical reviews, and
+            actionable research insights.
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+with hero_right:
+    st.markdown(
+        """
+        <div class="developer-badge">
+            <div class="developer-name">ABDUL MAJID</div>
+            <div class="developer-role">AI/ML ENGINEER</div>
+        </div>
+        """,
+        unsafe_allow_html=True
+    )
+
+st.markdown("---")
 
 # =========================================================
 # HELPER: METRIC CARD
